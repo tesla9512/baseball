@@ -23,32 +23,30 @@ public class CoreApplication {
 
 		//2번의 절차가 1번보다 적다고 판단하여 2번으로 간다
 
+		
+
 		Scanner scanner = new Scanner(System.in);
 
-		//여길 다시 만들어야 함, 중복된 숫자가 없어야 함
 		int[] numbers = {1,2,3,4,5,6,7,8,9};
 
 		String[] goal = new String[3];
 
-		int previous = -1;
-		int current = 0;
-		int index = 0;
-
 		for (int i = 0; i < 90; i++) {
-			current = ThreadLocalRandom.current().nextInt(0, 8);
+			int targetA = ThreadLocalRandom.current().nextInt(0, 8);
+			int targetB = ThreadLocalRandom.current().nextInt(0, 8);
 
-			if (previous == current)
-				continue;
+			if (targetA == targetB)
+				targetB = ThreadLocalRandom.current().nextInt(0, 8);
 
-			goal[index] = Integer.toString(numbers[current]);
-			index++;
-			previous = current;
-
-			if (index == 3)
-				break;
+			int tmp = numbers[targetA];
+			numbers[targetA] = numbers[targetB];
+			numbers[targetB] = tmp;
 		}
+		goal[0] = Integer.toString(numbers[0]);
+		goal[1] = Integer.toString(numbers[1]);
+		goal[2] = Integer.toString(numbers[2]);
 
-		int status = 0; //0 : 정상, 1 : 성공, 2 : 실패, 3 : 에러
+		int status = 0; //1 : 성공, 2 : 실패
 
 
 		for (int i = 0; i < 10; i++) {
@@ -89,8 +87,8 @@ public class CoreApplication {
 
 			}
 			catch (IllegalArgumentException e) {
-				System.out.println(e);
-				System.out.println("잘못된 입력으로 게임이 중단되었습니다.");
+				// System.out.println("잘못된 입력으로 게임이 중단되었습니다.");
+				 System.out.println(e.getMessage());
 				break;
 			}
 		}
@@ -112,5 +110,4 @@ public class CoreApplication {
 
 		scanner.close();
 	}
-
 }
