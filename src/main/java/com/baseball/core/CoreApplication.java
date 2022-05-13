@@ -1,6 +1,5 @@
 package com.baseball.core;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.baseball.core.Game.GenerateRandomNumber;
@@ -15,8 +14,8 @@ import com.baseball.core.Game.PlayerInput;
 public class CoreApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(CoreApplication.class, args);
-		//java로 이루어진 코드이므로 스프링을 사용하지않는다
+		// SpringApplication.run(CoreApplication.class, args);
+		// java로 이루어진 코드이므로 스프링을 사용하지않는다
 		GenerateRandomNumber genNumber = new GenerateRandomNumber();
 		PlayerInput player = new PlayerInput();
 		Intermission intermission = new Intermission();
@@ -24,7 +23,7 @@ public class CoreApplication {
 		boolean isPlaying = true;
 		int attemps = 0;
 
-		while(isPlaying) {
+		while (isPlaying) {
 			List<Integer> newGame = genNumber.pickNumber();
 			String result = "";
 
