@@ -27,4 +27,4 @@ ex) CPU의 숫자가 416일 때, 463을 제시 = 1 Strikes, 1 Balls
 이 브랜치엔 최종 코드를 담지않고 
 각각의 진행상태에 따라 브랜치를 만들어 단계를 구분하려고 한다
 
-master -> codingBranch -> refactoringBranch
+master -> branch1 -> branch2
