@@ -1,5 +1,6 @@
-# java-baseball-practice
-# WWH프리코스의 문제 따라해보기
+# baseball
+
+# -
 
 
 ## 숫자 야구 만들기
