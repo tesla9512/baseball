@@ -1,4 +1,4 @@
-# java-baseball-practice
+# baseball
 
 ## 코드 다듬기
 
