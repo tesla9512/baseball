@@ -1,4 +1,4 @@
-# java-baseball-practice
+# baseball
 
 ## 일단 기능을 구현하기
 
