@@ -1,5 +1,5 @@
 # baseball
-## 숫자 야구 자바판
+## 숫자 야구 자바
 
 > https://github.com/woowacourse/java-baseball-precourse
 
